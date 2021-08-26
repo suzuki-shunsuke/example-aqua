@@ -17,5 +17,7 @@ jobs:
       - run: command -v aqua
       - run: aqua -v
       - run: aqua i
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: echo "$PWD/.aqua/bin" >> $GITHUB_PATH
       - run: golangci-lint help
