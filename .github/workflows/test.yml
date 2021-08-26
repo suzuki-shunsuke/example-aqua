@@ -1,0 +1,21 @@
+---
+name: test
+on:
+  push:
+    branches: [main]
+    tags: [v*]
+  pull_request:
+    branches: [main]
+jobs:
+  default:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: suzuki-shunsuke/aqua-installer@main
+        with:
+          version: v0.1.0-4
+      - run: command -v aqua
+      - run: aqua -v
+      - run: aqua i
+      - run: echo "$PWD/.aqua/bin" >> $GITHUB_PATH
+      - run: golangci-lint help
