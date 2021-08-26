@@ -1,18 +1,8 @@
 packages:
-- name: aqua
-  repository: inline
-  version: v0.1.0-4
 - name: golangci
   repository: inline
   version: v1.42.0
 inline_repository:
-- name: aqua
-  type: github_release
-  repo_owner: suzuki-shunsuke
-  repo_name: aqua
-  artifact: 'aqua_{{.OS}}_{{.Arch}}.tar.gz'
-  files:
-  - name: aqua
 - name: golangci
   type: github_release
   repo_owner: golangci
