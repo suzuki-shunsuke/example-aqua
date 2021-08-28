@@ -7,7 +7,7 @@ Example of [aqua](https://github.com/suzuki-shunsuke/aqua).
 
 ## Install tools in CI/CD
 
-In this example, tools are install in CI with aqua.
+In this example, tools are installed in CI with aqua.
 
 [.github/workflows/test.yml](https://github.com/suzuki-shunsuke/example-aqua/blob/main/.github/workflows/test.yml)
 
