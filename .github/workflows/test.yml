@@ -11,13 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - uses: suzuki-shunsuke/aqua-installer@main
         with:
-          version: v0.1.0-8
+          version: v0.1.0-9
       - run: command -v aqua
       - run: aqua -v
-      - run: aqua i
+      - run: aqua i --only-link
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: echo "$PWD/.aqua/bin" >> $GITHUB_PATH
+
       - run: golangci-lint help
