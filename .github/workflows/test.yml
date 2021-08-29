@@ -14,7 +14,7 @@ jobs:
 
       - uses: suzuki-shunsuke/aqua-installer@main
         with:
-          version: v0.1.0-9
+          version: v0.1.0
       - run: command -v aqua
       - run: aqua -v
       - run: aqua i --only-link
