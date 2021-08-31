@@ -14,13 +14,13 @@ jobs:
 
       - uses: suzuki-shunsuke/aqua-installer@main
         with:
-          version: v0.1.0
+          version: v0.2.0
       - run: command -v aqua
       - run: aqua -v
       - run: aqua i --only-link
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: echo "$PWD/.aqua/bin" >> $GITHUB_PATH
+      - run: echo "$HOME/.aqua/bin" >> $GITHUB_PATH
 
       - run: golangci-lint help
         env:

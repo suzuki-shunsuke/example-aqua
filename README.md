@@ -14,7 +14,7 @@ In this example, tools are installed in CI with aqua.
 ```yaml
       - uses: suzuki-shunsuke/aqua-installer@main
         with:
-          version: v0.1.0-9
+          version: v0.2.0
       - run: aqua i --only-link
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -29,7 +29,12 @@ Requirements.
 
 * [aqua](https://github.com/suzuki-shunsuke/aqua-installer#shell)
 * [GITHUB_TOKEN](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token). The permission `repo` is needed
-* [direnv](https://github.com/direnv/direnv#basic-installation): To add `.aqua/bin` to the environment variable `PATH`
+
+Add `$HOME/.aqua/bin` to the environment variable `PATH`.
+
+```
+$ export PATH=$HOME/.aqua/bin:$PATH
+```
 
 Create links.
 
