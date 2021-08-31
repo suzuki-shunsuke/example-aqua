@@ -21,6 +21,8 @@ In this example, tools are installed in CI with aqua.
       - run: echo "$PWD/.aqua/bin" >> $GITHUB_PATH
 
       - run: golangci-lint help
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 ## Install tools for this project's local development

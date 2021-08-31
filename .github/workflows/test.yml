@@ -22,6 +22,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: echo "$HOME/.aqua/bin" >> $GITHUB_PATH
 
-      - run: golangci-lint help
+      - run: golangci-lint version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
