@@ -9,19 +9,18 @@ on:
 jobs:
   default:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
 
       - uses: suzuki-shunsuke/aqua-installer@main
         with:
-          version: v0.3.0
+          version: v0.3.2-0
       - run: command -v aqua
       - run: aqua -v
       - run: aqua i --only-link
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: echo "$HOME/.aqua/bin" >> $GITHUB_PATH
 
       - run: golangci-lint version
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: helm version
