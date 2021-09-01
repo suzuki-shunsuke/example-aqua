@@ -14,7 +14,7 @@ In this example, tools are installed in CI with aqua.
 ```yaml
       - uses: suzuki-shunsuke/aqua-installer@main
         with:
-          version: v0.2.0
+          version: v0.3.0
       - run: aqua i --only-link
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
