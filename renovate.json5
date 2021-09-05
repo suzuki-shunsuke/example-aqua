@@ -1,11 +1,14 @@
 {
-  extends: ["config:base"],
+  automerge: true,
+  extends: [
+    "config:base",
+    "github>suzuki-shunsuke/aqua-renovate-config",
+  ],
   regexManagers: [
     {
-      fileMatch: ["aqua.yaml"],
+      fileMatch: [".github/workflows/test.yml"],
       matchStrings: [
-        'version: "?(?<currentValue>.*?)"? # renovate: depName=(?<depName>.*)',
-        'ref: "?(?<currentValue>.*?)"? # renovate: depName=(?<depName>.*)',
+        "version: (?<currentValue>.*?) # renovate: depName=(?<depName>.*)",
       ],
       datasourceTemplate: "github-releases",
     },
