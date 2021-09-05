@@ -1,3 +1,13 @@
 {
   extends: ["config:base"],
+  regexManagers: [
+    {
+      fileMatch: ["aqua.yaml"],
+      matchStrings: [
+        'version: "?(?<currentValue>.*?)"? # renovate: depName=(?<depName>.*)',
+        'ref: "?(?<currentValue>.*?)"? # renovate: depName=(?<depName>.*)',
+      ],
+      datasourceTemplate: "github-releases",
+    },
+  ],
 }
