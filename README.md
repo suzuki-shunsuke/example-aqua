@@ -11,20 +11,6 @@ In this example, tools are installed in CI with aqua.
 
 [.github/workflows/test.yml](https://github.com/suzuki-shunsuke/example-aqua/blob/main/.github/workflows/test.yml)
 
-```yaml
-      - uses: suzuki-shunsuke/aqua-installer@main
-        with:
-          version: v0.3.0
-      - run: aqua i --only-link
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: echo "$PWD/.aqua/bin" >> $GITHUB_PATH
-
-      - run: golangci-lint help
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-```
-
 ## Install tools for this project's local development
 
 Requirements.

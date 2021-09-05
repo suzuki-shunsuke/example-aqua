@@ -1,33 +1,14 @@
+registries:
+- type: standard
+  version: v0.2.1 # renovate: depName=suzuki-shunsuke/aqua-registry
+
 packages:
 - name: golangci-lint
-  registry: inline
+  registry: standard
   version: v1.42.0 # renovate: depName=golangci/golangci-lint
 - name: peco
-  registry: inline
+  registry: standard
   version: v0.5.10 # renovate: depName=peco/peco
 - name: helm
-  registry: inline
+  registry: standard
   version: v3.6.3 # renovate: depName=helm/helm
-inline_registry:
-- name: golangci-lint
-  type: github_release
-  repo_owner: golangci
-  repo_name: golangci-lint
-  asset: 'golangci-lint-{{trimPrefix "v" .Package.Version}}-{{.OS}}-{{.Arch}}.tar.gz'
-  files:
-  - name: golangci-lint
-    src: 'golangci-lint-{{trimPrefix "v" .Package.Version}}-{{.OS}}-{{.Arch}}/golangci-lint'
-- name: peco
-  type: github_release
-  repo_owner: peco
-  repo_name: peco
-  asset: 'peco_{{.OS}}_{{.Arch}}.zip'
-  files:
-  - name: peco
-    src: 'peco_{{.OS}}_{{.Arch}}/peco'
-- name: helm
-  type: http
-  url: https://get.helm.sh/helm-{{.Package.Version}}-{{.OS}}-{{.Arch}}.tar.gz
-  files:
-  - name: helm
-    src: "{{.OS}}-{{.Arch}}/helm"
