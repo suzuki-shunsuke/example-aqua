@@ -5,7 +5,7 @@ registries:
 packages:
 - name: golangci-lint
   registry: standard
-  version: v1.42.0 # renovate: depName=golangci/golangci-lint
+  version: v1.42.1 # renovate: depName=golangci/golangci-lint
 - name: peco
   registry: standard
   version: v0.5.10 # renovate: depName=peco/peco
