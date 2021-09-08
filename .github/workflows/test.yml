@@ -16,7 +16,7 @@ jobs:
 
       - uses: suzuki-shunsuke/aqua-installer@main
         with:
-          version: v0.5.2 # renovate: depName=suzuki-shunsuke/aqua
+          version: v0.5.3 # renovate: depName=suzuki-shunsuke/aqua
       - run: command -v aqua
       - run: aqua -v
       - run: aqua i --only-link
