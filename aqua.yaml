@@ -1,14 +1,14 @@
 registries:
 - type: standard
-  ref: v0.4.3 # renovate: depName=suzuki-shunsuke/aqua-registry
+  ref: v0.5.0 # renovate: depName=suzuki-shunsuke/aqua-registry
 
 packages:
-- name: golangci-lint
+- name: golangci/golangci-lint
   registry: standard
   version: v1.42.1 # renovate: depName=golangci/golangci-lint
-- name: peco
+- name: peco/peco
   registry: standard
   version: v0.5.10 # renovate: depName=peco/peco
-- name: helm
+- name: helm/helm
   registry: standard
   version: v3.6.3 # renovate: depName=helm/helm
