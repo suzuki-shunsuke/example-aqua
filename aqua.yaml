@@ -11,4 +11,4 @@ packages:
   version: v0.5.10 # renovate: depName=peco/peco
 - name: helm/helm
   registry: standard
-  version: v3.6.3 # renovate: depName=helm/helm
+  version: v3.7.0 # renovate: depName=helm/helm
